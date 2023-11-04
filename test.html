@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    
+    <style>
+        .container {
+            position: absolute;
+            height: 300px;
+            width: 600px;
+            top: 60px;
+            display: flex;
+        }
+        
+        .card {
+            display: flex;
+            height: 280px;
+            width: 200px;
+            background-color: #17141d;
+            border-radius: 10px;
+            box-shadow: -1rem 0 2rem lightblue;
+            transition: 0.4s ease-out;
+            position: relative;
+            left: 0px;
+        }
+        
+        .card:not(:first-child) {
+            margin-left: -50px;
+        }
+        
+        .card:hover {
+            transform: translateY(-20px);
+            transition: 0.4s ease-out;
+        }
+        
+        .card:hover~.card {
+            position: relative;
+            left: 50px;
+            transition: 0.4s ease-out;
+        }
+        
+        .title {
+            color: white;
+            font-weight: 300;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+        }
+
+        .cardContent {
+            position: absolute;
+            top: 150px;
+            left: calc(50% - 60px);
+            margin: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h3 class="title">TEST ONE</h3>
+        </div>
+        <div class="card">
+            <h3 class="title">Card 2</h3>
+        </div>
+        <div class="card">
+            <h3 class="title">Card 3</h3>
+        </div>
+        <div class="card">
+            <h3 class="title">Card 4</h3>
+            <div class="cardContent">
+                <img style="height:3rem;" src="static/favicon.png">
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+
+</html>
